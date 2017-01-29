@@ -17,6 +17,9 @@
 #include "glog/logging.h"
 
 int main(int argc, char** argv) {
+	FLAGS_alsologtostderr = 1;
+	FLAGS_colorlogtostderr = true;
+	google::InitGoogleLogging(argv[0]);
   LOG(INFO) << "this is glog INFO test";
   LOG(ERROR) << "this is glog ERROR test";
   LOG(WARNING) << "other log useage see doc";
